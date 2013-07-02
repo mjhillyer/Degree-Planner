@@ -1,5 +1,13 @@
+<?php
+
+
+include'../constants/constants.php';
+
+?>
+
 <html>
 <body>
+<div style="float:left; width:66%">
 <h2>My Plan</h2> 
 
 <form name="editplan">
@@ -9,30 +17,46 @@
 
 <p>Courses Available for this Program</p>
 <table>
+<tr>
 <th>Course #</th>
 <th>Course Name<th>
 <th>Credits</th>
 <th>Reqd</th>
 <th>Pre-Reg(s)</th>
 <th>Offered</th>
-
-
+</tr>
 </table>
 
-<h2>My Plan</h2>
+<?php
+
+include 'courselist.php';
+
+?>
+
+
 
 <form name="saveplan">
 <input type="submit" value="Save this Plan">
 </form>
 
-Course Details
+<h2>My Plan</h2>
 
-<form name="addcourse">
-<input type="submit" value="Add Course to My Plan">
-</form>
+Spring 2014<br>
+<br>
+Course Name     HCI 585 Advanced Computer Architecture
+
+</div>
+
+<div style="float:right; width:33%">
 
 
+<?php
 
+include 'catalog.php';
+
+?>
+
+</div>
 
 </body>
 </html>

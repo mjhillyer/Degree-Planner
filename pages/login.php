@@ -4,6 +4,7 @@ $username = NULL;
 $password = NULL;
 $email = NULL;
 
+include'../constants/constants.php';
 
 ?>
 <html>
@@ -16,18 +17,20 @@ in classes.</p>
 
 <br>
 
-<form>
-<form name="login">
+<form name="login" >
 User name: <input type="text" name="username"><br>
 Password: <input type="password" name="password"><br>
-<a href="create.php">Create an account</a>
 <input type="submit" value="Log in">
 </form>
 
+<form name="new" action="<?php echo BASE; ?>index.php?p=create" method="post">
+<input type="submit" value="Create an account">
+</form>
+
+
 <p>
 
-<form>
-<form name="guest">
+<form name="guest" action="<?php echo BASE; ?>index.php?p=about" method="post">
 Continue as a Guest
 <input type="submit" value="Log in as Guest">
 </form>
@@ -35,3 +38,5 @@ Continue as a Guest
 
 
 </body>
+</html>
+

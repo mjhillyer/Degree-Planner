@@ -8,7 +8,7 @@ DB setup script
 
 //include constants
 
-include 'includes/constants/constants.php';
+include '../constants/constants.php';
 
 //Connect to MySQL Server
 $con = mysql_connect($dbhost, $dbuser, $dbpass);

@@ -26,7 +26,7 @@ Please Select Which Year:
 
 <form>
 <form name="add">
-<input type="submit" value="cancel">
+<input type="submit" value="Cancel">
 <input type="submit" value="Add Course">
 </form>
 

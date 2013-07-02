@@ -10,6 +10,7 @@ include '../constants/constants.php';
 
 $username = NULL;
 $password = NULL;
+$password2 = NULL;
 $email = NULL;
 $type = 'sha1';
 $STABLE = 'security';
@@ -48,7 +49,7 @@ if(isset($_POST['add']))
 	$username = mysql_real_escape_string($_POST['username']);
 	$password = mysql_real_escape_string($_POST['password']);
 	$email = mysql_real_escape_string($_POST['email']);
- 
+
 	$q = mysql_query("SELECT username FROM ".$STABLE." WHERE username = '$username'");
 	if(mysql_num_rows($q) > 0)
 	{
