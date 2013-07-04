@@ -6,21 +6,25 @@ include constants.php;
 
 
 <html>
+
+<!-- add stylesheet -->
+<link href="includes/styles/style.css" rel="stylesheet" type="text/css">
+
 <body>
 
     <div class="navcontainer">
-      <div id="logo"><img src="<?php echo BASE; ?>/includes/images/HCIDP_Logo.png" alt="HCI Degree Planner" /></div>
+      <img id=logo height=25px width=84px src="<?php echo BASE; ?>/includes/images/HCIDP_Logo.png" alt="HCI Degree Planner" />
       <!--/logo-->
-      (the nav list and logout will be hidden until user is logged in)
-      <ul id="navlist">
-        <li><a href="progress.php">My Progress</a></li>
-        <li><a href="plan.php">My Plan</a></li>
-        <li><a href="profile.php">My Profile</a></li>
-      </ul>
-      <div id="logout">INSERT LOGOUT FUNCTIONALITY</div><!--/logout-->
+      
+      <div id="navlist">
+        <a href="progress.php">My Progress</a>
+        <a href="plan.php">My Plan</a>
+        <a href="profile.php">My Profile</a>
+      </div>
+      <div id="logout">Log Out</div><!--/logout-->
     </div> <!--/navcontainer-->
 
-<hr>
+
     
 </body>
 </html>

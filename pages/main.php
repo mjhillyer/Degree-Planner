@@ -2,6 +2,8 @@
 
 include '../constants/constants.php';
 
+session_start();
+
 ?>
 
 <html>

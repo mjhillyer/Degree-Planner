@@ -2,28 +2,32 @@
 
 include'../constants/constants.php';
 
+session_start();
+
+
 ?>
 
 <html>
 <body>
 
-<h1>You're on your way!<h1>
+<h3>You're on your way!</h3>
 Please tell us a bit about yourself so we can make your degree planning easier
 
-<h2>Degree Sought</h2>
-By telling us your end goal, we will help ease the trouble of planning your way 
-by only showing information relevant to you selected degree types[s].<br><br>
+<h4>Degree Sought</h4>
+<p class="about">By telling us your end goal, we will help ease the trouble of planning your way 
+by only showing information relevant to you selected degree types[s].<br><br></p>
 
+<!--- removing other program choices due to time constraints--->
 <form>
-<input type="radio" name="degree" value="certificate">Certificate
+<!--<input type="radio" name="degree" value="certificate">Certificate-->
 <input type="radio" name="degree" value="masters" checked="checked">Masters of Science
-<input type="radio" name="degree" value="phd">PhD<br>
+<!--<input type="radio" name="degree" value="phd">PhD<br>-->
 </form>
 
 
 
-<h2>Program Type</h2>
-Tell us how you will be attending class.<br>
+<h4>Program Type</h4>
+<p class="about">Tell us how you will be attending class.<br></p>
 
 <form>
 <input type="radio" name="program" value="online" checked="checked">Online (Distance)
@@ -43,7 +47,7 @@ Home Department:
 
 
 <form name="plan" action="<?php echo BASE; ?>index.php?p=plan" method="post">
-<input type="submit" value="Create My Plan">
+<input type="submit" id="crbutton" class="button" value="Create My Plan">
 </form>
 
 

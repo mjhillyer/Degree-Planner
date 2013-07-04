@@ -15,7 +15,16 @@ $email = NULL;
 $type = 'sha1';
 $STABLE = 'security';
 
-echo '<form action="'.$_SERVER['PHP_SELF'].'" method="post">
+// uncomment for troubleshooting
+// echo $_SERVER['PHP_SELF'];
+// echo '<br>';
+// echo BASE;
+// echo '<br>';
+// echo BASE."/includes/pages/create.php";
+
+echo '<form id="newuser action=';
+echo BASE;
+echo '/includes/pages/create.php"" method="post">
 <table>
 <tr>
 <td>Username:</td>
@@ -28,8 +37,9 @@ echo '<form action="'.$_SERVER['PHP_SELF'].'" method="post">
 <tr>
 <td>Email:</td>
 <td><input type="text" name="email" value="'.stripslashes($email).'" /></td>
+</tr>
 <tr>
-<td colspan="2" align="center"><input type="submit" name="add" value="Add User" /></td>
+<td colspan="2" align="center"><input type="submit" class="button" name="add" value="Create User" /></td>
 </tr>
 </table>
 </form>';
@@ -56,16 +66,9 @@ if(isset($_POST['add']))
 		echo "User already exists";
 	}
 
-	//md5 selected
-	if(isset($type) && $type == 'sha1')
-	{
-		$password = sha1($password);
-	}
-	//nothing selected
-	else
-	{
-		//do nothing
-	}
+	//md5 encrypts password
+	
+	$password = sha1($password);
 	
 	$q1 = mysql_query("INSERT INTO ".$STABLE." (username, password, email) VALUES ('$username', '$password', '$email')") or die("Unable to insert data");
 }
